@@ -1,0 +1,17 @@
+/*  your css code here. If applicable */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px 10px;
+}
+
+.grid-item {
+    display: flex;
+    background-color: lightgray;
+    height: 150px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
