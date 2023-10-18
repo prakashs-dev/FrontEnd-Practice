@@ -1,3 +1,25 @@
-body{
+body {
     background-color: #e2e1e0;
+}
+
+#head {
+    font-weight: bold;
+    padding: 25px;
+    text-align: center;
+}
+
+.my-list {
+    text-align: center;
+}
+
+#box {
+    width: 300px;
+    height: 400px;
+    background-color: lightcoral;
+}
+
+#box-1 {
+    width: 300px;
+    height: 400px;
+    background-color: lightgreen;
 }
