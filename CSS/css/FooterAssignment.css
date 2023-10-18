@@ -5,5 +5,11 @@ body{
 .name{
     color : white;
     /* background */
+    display : flex;
+}
 
+.name>.log{
+
+    display: flex;
+    flex-direction: row-reverse;
 }
