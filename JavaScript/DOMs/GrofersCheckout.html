@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table style="width: 100%; text-align: center" border="1">
+      <caption>
+        Monthly savings
+      </caption>
+      <tr>
+        <th>Item</th>
+        <th>Prices in Rs</th>
+      </tr>
+      <tr>
+        <td class="item">Tea</td>
+        <td class="price">50</td>
+      </tr>
+      <tr>
+        <td class="item">Coffee</td>
+        <td class="price">70</td>
+      </tr>
+      <tr>
+        <td class="item">Biscuits</td>
+        <td class="price">100</td>
+      </tr>
+      <tr>
+        <td class="item">Rice</td>
+        <td class="price">130</td>
+      </tr>
+      <tr>
+        <td class="item">Milk</td>
+        <td class="price">50</td>
+      </tr>
+    </table>
+
+    <script>
+      const getSumBtn = document.createElement("button");
+      getSumBtn.append("Get Total Price");
+      document.body.appendChild(getSumBtn);
+
+      const getSum = () => {
+        const getPrices = document.querySelectorAll(".price");
+        let sum = 0;
+        for (let i = 0; i < getPrices.length; i++) {
+          sum += parseInt(getPrices[i].innerText);
+        }
+        const table = document.querySelector("table");
+        let row = table.insertRow(-1);
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        cell1.innerText = "Total";
+        // cell1.id = "ans";
+        cell2.id = "ans";
+        cell2.innerText = sum;
+        getSumBtn.removeEventListener('click',getSum);
+        console.log(table);
+        
+      };
+      getSumBtn.addEventListener("click", getSum);
+    </script>
+  </body>
+</html>

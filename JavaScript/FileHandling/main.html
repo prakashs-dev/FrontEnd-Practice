@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #upper:checked {
+        width: 30px;
+        height: 30px;
+      }
+      #lower:checked {
+        width: 30px;
+        height: 30px;
+      }
+      #upper:checked + label {
+        border: 1px solid red;
+      }
+      #lower:checked + label {
+        border: 2px solid yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <input type="checkbox" id="upper" />UpperCase
+    <input type="checkbox" id="lower" />LowerCase
+    <label id="cell">Hello World</label> -->
+
+    <div>
+      <input type="radio" id="upper" />
+      <label id="cell">Hello World</label>
+      <input type="radio" id="lower" />
+      <label id="cell">Good</label>
+    </div>
+
+    <script type="text/javascript">
+      const checkbox = document.getElementById("upper");
+      const lower = document.getElementById("lower");
+      const cell = document.getElementById("cell");
+      let txt = cell.innerText;
+
+      function txtChange(event) {
+        if (event.target.checked) {
+          cell.innerText = txt.toUpperCase();
+        } else {
+          cell.innerText = txt;
+        }
+      }
+      function onLowerTxt() {
+        if (event.target.checked) {
+          cell.innerText = txt.toLowerCase();
+        } else {
+          cell.innerText = txt;
+        }
+      }
+      checkbox.addEventListener("click", txtChange);
+      lower.addEventListener("click", onLowerTxt);
+    </script>
+  </body>
+</html>

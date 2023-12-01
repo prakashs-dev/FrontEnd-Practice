@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Screen Size</p>
+    <h1 id="sizeInfo"></h1>
+    <script>
+      const header = document.getElementById("sizeInfo");
+      window.addEventListener("resize", () => {
+        header.textContent = `Width: ${window.outerWidth} and Height: ${window.outerHeight}`;
+      });
+    </script>
+  </body>
+</html>

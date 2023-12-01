@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .container {
+        justify-content: center;
+        display: flex;
+        height: 37rem;
+        width: 40rem;
+        margin-top: 12vh;
+      }
+      button {
+        border: none;
+        background-color: #fe3f40;
+      }
+      button:hover {
+        background-color: #dc3545;
+      }
+
+      .photo-container {
+        height: 30rem;
+        margin-top: 3rem;
+        margin-left: -3.5rem;
+      }
+      .apple {
+        margin-left: -5rem;
+      }
+      .product__info {
+        margin-left: 4rem;
+        margin-top: 3rem;
+      }
+      .controls {
+        cursor: pointer;
+      }
+      .card1 {
+        cursor: pointer;
+      }
+      .card1:hover {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body style="background-color: #10e37f">
+    <div class="container card shadow col-sm-9 col-md-20 col-lg-6">
+      <section class="product d-flex">
+        <div class="product__photo col-sm-4 col-md-15 col-lg-4">
+          <div
+            class="photo-container card shadow-lg rounded"
+            style="width: 18rem"
+          >
+            <div class="photo-main" style="background-color: #a3e41b">
+              <div class="controls d-flex justify-content-between px-2 py-2">
+                <i class="fa fa-share-alt text-light"></i>
+                <i class="fa fa-heart-o text-light"></i>
+              </div>
+              <img
+                class="apple"
+                src="https://res.cloudinary.com/john-mantas/image/upload/v1537291846/codepen/delicious-apples/green-apple-with-slice.png"
+                alt="green apple slice"
+              />
+            </div>
+            <div class="photo-album">
+              <ul class="d-flex py-3">
+                <li class="card">
+                  <img
+                    src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png"
+                    alt="green apple"
+                  />
+                </li>
+                <li class="card">
+                  <img
+                    src="https://res.cloudinary.com/john-mantas/image/upload/v1537303532/codepen/delicious-apples/half-apple.png"
+                    alt="half apple"
+                  />
+                </li>
+                <li class="card">
+                  <img
+                    src="https://res.cloudinary.com/john-mantas/image/upload/v1537303160/codepen/delicious-apples/green-apple-flipped.png"
+                    alt="green apple"
+                  />
+                </li>
+                <li class="card">
+                  <img
+                    src="https://res.cloudinary.com/john-mantas/image/upload/v1537303708/codepen/delicious-apples/apple-top.png"
+                    alt="apple top"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="product__info">
+          <div class="title">
+            <h1>Delicious Apples</h1>
+            <span class="text-muted fs-6">CODE: 45999</span>
+          </div>
+          <br />
+          <div class="price" style="color: #fe3f40">
+            R$ <span class="fs-1">7.93</span>
+          </div>
+          <br />
+          <div class="variant">
+            <h3 class="text-muted fs-6">SELECT A COLOR</h3>
+            <ul class="d-flex hover">
+              <li class="card card1">
+                <img
+                  src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png"
+                  alt="green apple"
+                />
+              </li>
+              <li class="card card1">
+                <img
+                  src="https://res.cloudinary.com/john-mantas/image/upload/v1537302752/codepen/delicious-apples/yellow-apple.png"
+                  alt="yellow apple"
+                />
+              </li>
+              <li class="card card1">
+                <img
+                  src="https://res.cloudinary.com/john-mantas/image/upload/v1537302427/codepen/delicious-apples/orange-apple.png"
+                  alt="orange apple"
+                />
+              </li>
+              <li class="card card1">
+                <img
+                  src="https://res.cloudinary.com/john-mantas/image/upload/v1537302285/codepen/delicious-apples/red-apple.png"
+                  alt="red apple"
+                />
+              </li>
+            </ul>
+          </div>
+          <br />
+          <div class="description">
+            <h3 class="text-muted fs-6">BENEFITS</h3>
+            <ul>
+              <li>Apples are nutricious</li>
+              <li>Apples may be good for weight loss</li>
+              <li>Apples may be good for bone health</li>
+              <li>They're linked to a lowest risk of diabetes</li>
+            </ul>
+          </div>
+          <button class="shadow-lg p-2 mb-5 rounded text-white fw-bold">
+            ADD TO CART
+          </button>
+        </div>
+      </section>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
