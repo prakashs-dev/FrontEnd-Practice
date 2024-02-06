@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="newTodoInput" />
+    <button id="addTodoBtn">Add todo</button>
+    <ol id="todoList">
+    </ol>
+    <script>
+      const input = document.getElementById("newTodoInput");
+      const btnClick = document.getElementById("addTodoBtn");
+      const list = document.getElementById("todoList");
+      btnClick.addEventListener("click", function () {
+        if (input.value) {
+          const myList = document.createElement("li");
+          myList.innerText = input.value;
+          list.appendChild(myList);
+          input.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form class="form-username" id="form">
+      <h1><span id="header">Hey!</span> Friends Let's We Talk</h1>
+      <input
+        type="text"
+        placeholder="User Name"
+        id="username-input"
+        autofocus
+      />
+      <button id="join-chat" type="submit">Join Chat</button>
+    </form>
+    <div class="chatroom-container">
+      <div class="chatroom-header">
+        <div class="head-content">Friends Chat Room</div>
+        <div class="exit-button material-symbols-outlined md-36">logout</div>
+      </div>
+
+      <div class="messages-container">
+        <!-- <div class="message incoming">
+          <span class="username">username</span>
+          <span class="time">12:00</span>
+          <p>receive</p>
+        </div> -->
+        <!-- <div class="message sent">
+          <span class="username">You</span>
+          <span class="time">12:00</span>
+          <p>sent</p>
+        </div> -->
+      </div>
+      <div id="control-area">
+        <input
+          type="text"
+          placeholder="Type a message"
+          id="message-input"
+          autofocus
+        />
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+    <!-- cdn for socket io in my frontend -->
+    <script
+      src="https://cdn.socket.io/4.7.2/socket.io.min.js"
+      integrity="sha384-mZLF4UVrpi/QTWPA7BjNPEnkIfRFn4ZEO3Qt/HFklTJBj/gBOV8G3HcKn4NfQblz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

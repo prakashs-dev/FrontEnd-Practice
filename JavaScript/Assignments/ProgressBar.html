@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #container {
+        display: flex;
+        align-items: center;
+        width: 500px;
+      }
+
+      .circle {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #e2e2e3;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+      }
+
+      .line {
+        border: 3px solid #e2e2e3;
+        flex-grow: 1;
+      }
+
+      .active {
+        border-color: #3498da;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      #btns {
+        display: flex;
+        gap: 20px;
+      }
+
+      button {
+        background-color: #3498da;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 10px 20px;
+      }
+
+      button:disabled {
+        background-color: #5684a2;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div id="container">
+        <div id="circle-1" class="circle active">1</div>
+        <div class="line"></div>
+        <div id="circle-2" class="circle">2</div>
+        <div class="line"></div>
+        <div id="circle-3" class="circle">3</div>
+        <div class="line"></div>
+        <div id="circle-4" class="circle">4</div>
+        <div class="line"></div>
+        <div id="circle-5" class="circle">5</div>
+      </div>
+      <div id="btns">
+        <button id="prev" disabled onclick="prev()">Prev</button>
+        <button id="next" onclick="next()">Next</button>
+      </div>
+    </section>
+
+    <script>
+      let currentElement = document.querySelector(".circle:first-child");
+      const prevButton = document.getElementById("prev");
+      const nextButton = document.getElementById("next");
+      let position = 1;
+      function next() {
+        if (prevButton.disabled) prevButton.disabled = false;
+        if (position < 5) {
+          const nxtLine = currentElement.nextElementSibling;
+          nxtLine.classList.add("active");
+          const nxtCircle = nxtLine.nextElementSibling;
+          nxtCircle.classList.add("active");
+
+          currentElement = nxtCircle;
+          position++;
+          if (position === 5) {
+            nextButton.disabled = true;
+          }
+        } 
+      }
+      function prev() {
+        if (nextButton.disabled) nextButton.disabled = false;
+        if (position !== 1) {
+          currentElement.classList.remove("active");
+          const line = currentElement.previousElementSibling;
+          line.classList.remove("active");
+
+          currentElement = line.previousElementSibling;
+          position--;
+          if (position === 1) {
+            prevButton.disabled = true;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

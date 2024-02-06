@@ -475,11 +475,7 @@ prev = 20, current = 11 =>20+11=31
 // -----------> number reverse <----------------
 // let nums = 123335;
 // let rev = 0;
-// while (nums > 0) {
-//   let last = nums % 10;
-//   rev = rev * 10 + last;
-//   nums = Math.floor(nums / 10);
-// }
+// x
 // console.log(rev);
 
 // console.log(Math.floor(f));
@@ -537,3 +533,216 @@ prev = 20, current = 11 =>20+11=31
 //   };
 // };
 // console.log(createCounter(10));
+
+// ---------------------------------------------------
+
+// const arrOfDates = ["2023/03/01", "2023/03/02", "2023/03/03"];
+// let max = 0;
+// let min = 0;
+// for (let i = 0; i < arrOfDates.length; i++) {
+//   min = Math.min(new Date(arrOfDates[i]));
+//   max = Math.max(new Date(arrOfDates[i]));
+// }
+// console.log(new Date(min));
+// console.log(new Date(max));
+
+// function minDate(dates) {
+//   return dates.reduce((min, date) => (date < min ? date : min), dates[0]);
+// }
+
+// console.log(minDate(["2023/03/01", "2023/03/02", "2023/03/03"])); // "2023/03/01"
+// console.log(minDate(["2023/01/01", "2023/02/02", "2022/12/31"])); // "2022/12/31"
+
+let wate = new Date();
+console.log(wate.toLocaleTimeString());
+console.log(wate.getHours() + ":" + wate.getMinutes());
+
+const reult = document.getElementById("result");
+const tst = document.createElement("span");
+
+// const colorTxt = document.getElementById("randomColor");
+// const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+// let name = "prakash";
+// tst.innerText = `${name}`;
+// tst.style.color = "#" + randomColor;
+// reult.append(tst);
+
+function calculate_nCr(n, r) {
+  // write code here
+  let nFact = 1;
+  for (let i = 1; i <= n; i++) {
+    nFact = i * nFact;
+  }
+  console.log(nFact);
+  let rFact = 1;
+  for (let i = 1; i <= r; i++) {
+    rFact = i * rFact;
+  }
+  console.log(rFact);
+  const nrFactDiff = n - r;
+  console.log(nrFactDiff);
+  let nrFact = 1;
+  for (let i = 1; i <= nrFactDiff; i++) {
+    nrFact = i * nrFact;
+  }
+  const nCr = nFact / (rFact * nrFact);
+  return nCr;
+}
+
+// console.log(calculate_nCr(5, 2));
+
+// var input = 8;
+// for (let i = 1; i <= 10; i++) {
+//   console.log('8 x',i,'=',input*i);
+// }
+
+// async function foo(){
+//   console.log('hello');
+//   await new Promise(resolve => setTimeout(resolve, 2000));
+//   console.log('word');
+// }
+// foo();
+// console.log('end');
+
+// var elem = document.createElement("div");
+// elem.innerHTML = "<p>Hello</p>";
+// document.body.appendChild(elem.firstChild);
+// console.log(document.body.innerHTML);
+
+// const tg = document.getElementsByTagName("p");
+// for (let i = 0; i < tg.length; i++) {
+//   tg[i].innerText = 'GOOD';
+// }
+// console.log(document.body.innerHTML);
+
+// var elem = document.createElement("div");
+// elem.innerHTML = "<p>Hello</p>";
+// document.body.insertBefore(elem.firstChild, document.getElementById("test"));
+// console.log(document.body.innerHTML);
+
+// const ll = document.querySelector('#myDiv');
+// ll.classList.add('active');
+// console.log(ll.className);
+
+// const ptg = document.createElement("p");
+// const txt = document.createTextNode("MY World");
+// ptg.appendChild(txt);
+// document.getElementById('myDiv').appendChild(ptg);
+// console.log(document.getElementById('myDiv').innerHTML);
+
+// let d = document.querySelectorAll(".myClass");
+// d.parentNode.removeChild(d);
+// console.log(d);
+
+// let img = document.createElement("img");
+// img.src =
+//   "https://images.unsplash.com/photo-1704676849858-41c9af3e4764?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8";
+// img.alt = "bad";
+// document.body.insertBefore(img, document.getElementById("myDiv"));
+// console.log(document.body.innerHTML);
+
+// let sh = document.getElementsByClassName("myClass");
+// for (let i = 0; i < sh.length; i++) {
+//   sh[i].addEventListener("click", function () {
+//     console.log(this.innerHTML);
+//   });
+// }
+
+// fetch("https://dummyjson.com/carts")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     console.log(data);
+//     document.querySelector(".loader").style.display = "none";
+//     if (data.products.length > 0) {
+//       data.products.forEach((product, i) => {
+//         document.getElementById("products").innerHTML += `
+//           <div class = "product">
+//           <img src="${product.thumbnail}"/>
+//           <h4>${product.title} Price ${product.price}</h4>
+//           </div>
+//         `;
+//       });
+//     }
+//   });
+// fetch("https://dummyjson.com/users")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     console.log(data);
+//     document.querySelector(".loader").style.display = "none";
+//     if (data.users.length > 0) {
+//       data.users.forEach((user, i) => {
+//         document.getElementById("user-list").innerHTML += `
+//         <div class="user">
+//         <img src=${user.image} />
+//         <h4>Name <span>${user.firstName} ${user.lastName}</span></h4>
+//         <p><b>Email</b> ${user.email}</p>
+//         <p><b>DOB</b> ${user.birthDate}</p>
+
+//         `;
+//       });
+//     }
+//   });
+
+// --------->Accessing Nested Objects
+// const myStorage = {
+//   car: {
+//     inside: {
+//       "glove box": "maps",
+//       "passenger seat": "crumbs",
+//     },
+//     outside: {
+//       trunk: "jack",
+//     },
+//   },
+// };
+
+// const gloveBoxContents = myStorage.car["inside"]["glove box"];
+// console.log(gloveBoxContents);
+
+// const myDog = {
+//   name: "Coder",
+//   legs: 4,
+//   tails: 1,
+//   friends: ["freeCodeCamp Campers"],
+// };
+
+// myDog.name = "Happay Coder";
+// myDog.bark = "woof";
+// console.log(myDog);
+
+// let rem = document.getElementById("rememberme");
+
+// document.getElementById("login").addEventListener("click", (event) => {
+//   let username = document.getElementById("username").value;
+//   let password = document.getElementById("password").value;
+//   if (rem.checked) {
+//     localStorage.setItem(username, password);
+//     event.preventDefault();
+//   }
+// });
+
+// fetch(
+//   "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false"
+// )
+//   .then((res) => res.json())
+//   .then(console.log(res));
+
+// fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false")
+// .then((res) => res.json())
+// .then((data) => {
+//   console.log(data);
+// });
+
+document.getElementById("toggle-mode").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+let nums = "10";
+
+if (nums === 10) {
+  console.log("yes 1");
+} else if (nums === "10") {
+  console.log("yes 2");
+} else if ("10" === "10") {
+  console.log("yes 3");
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input:valid {
+        background-color: lightgreen;
+      }
+      input:invalid {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Generate random string
+      const randomStr = () => Math.random().toString(36).slice(2);
+      console.log(randomStr());
+
+      // Generate random String with given length;
+      const random = (length = 15) => {
+        let result = "";
+        while (result.length < length) {
+          result += Math.random().toString(36).slice(2);
+        }
+        return result.slice(0, length);
+      };
+      console.log(random());
+
+      // Check values is Array or not
+      const isArray = (arr) => Array.isArray(arr);
+      console.log(isArray([1, 2, 3, 4, 5, 6]));
+      console.log(isArray("Name"));
+      console.log(isArray({ name: "good" }));
+
+      // Calculate number of days b/w two dates
+      const dayDiff = (date, date1) =>
+        Math.ceil(Math.abs(date - date1) / 86400000);
+      console.log(dayDiff(new Date("2023-03-01"), new Date("2023-03-16")));
+
+      // Check palindrome
+      const isPalindrome = (str) => str === str.split("").reverse().join("");
+      console.log(isPalindrome("racecar"));
+      console.log(isPalindrome("AmanaplanacanalPanama".toLowerCase()));
+
+      //convert string to string array;
+      const str = (str) => {
+        const a = str.split("");
+        console.log(a);
+        let a1 = a.join("-");
+        console.log(a1);
+      };
+      str("Hello");
+
+      // Sort the array ascending order
+      const ascending = (arr) => arr.sort((a, b) => a - b);
+      const descending = (arr) => arr.sort((a, b) => b - a);
+      console.log(ascending([5, 1, 4, 3, 2]));
+      console.log(descending([1, 2, 3, 4, 5]));
+
+      // Check number even or odd
+      const isEven = (num) => num % 2 === 0;
+      console.log(isEven(2));
+
+      // Diff b/w splice and slice
+
+      let name = "prakash";
+      console.log(name.slice(0, 3));
+
+      function daysInMonth(month) {
+        const daysInNonLeapYear = [
+          31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31,
+        ];
+
+        if (month >= 1 && month <= 12) {
+          return daysInNonLeapYear[month - 1];
+        } else {
+          return "Invalid month. Please provide a number between 1 and 12.";
+        }
+      }
+      const monthNumber = 3; // For April
+      const days = daysInMonth(monthNumber);
+      console.log(`Number of days in month ${monthNumber}: ${days}`);
+
+      let obj = [
+        {
+          name: "prakash",
+          id: 3,
+        },
+        {
+          name: "Good",
+          id: 1,
+        },
+        {
+          name: "Bad",
+          id: 2,
+        },
+      ];
+      console.log(
+        obj.sort((a, b) => {
+          return a.id - b.id;
+        })
+      );
+
+      const student = [
+        ["Student B", "A"],
+        ["Student C", "B"],
+        ["Student A", "C"],
+        ["Student D", "D"],
+      ];
+
+      const names = student.map((student) => student[0]);
+      const sortedNames = names.sort();
+      console.log(sortedNames);
+
+      function recu(arr, st, end) {
+        let newArray = [];
+        for (let i = end; i >= st; i--) {
+          newArray.push(arr[i]);
+        }
+        return newArray;
+      }
+
+      let arr = [1, 2, 3, 4, 5];
+      let n = arr.length;
+      console.log(recu(arr, 0, n - 1));
+
+      const circle = (radius) => {
+        return Math.PI * radius * radius;
+      };
+      const m = circle(4).toFixed(2);
+      alert(`The area of the circle with radius ${4} is ${m}`);
+    </script>
+  </body>
+</html>

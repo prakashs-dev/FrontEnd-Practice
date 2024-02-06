@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#" id="link">Here Some Link Mouse Hover</a>
+    <p>
+      Lorem ipsum is typically a corrupted version of De finibus bonorum et
+      malorum, a 1st-century<strong>
+        BC text by the Roman statesman and philosopher Cicero,</strong
+      >
+      with words altered, added, and
+      <strong>removed to make it nonsensical and improper Latin</strong>Lorem
+      ipsum is typically a corrupted version
+    </p>
+    <script>
+      const link = document.getElementById("link");
+      const changeColor = document.querySelectorAll("strong");
+
+      function highlight(event) {
+        for (let i = 0; i < changeColor.length; i++) {
+          changeColor[i].style.color = "green";
+        }
+      }
+      function return_normal() {
+        for (let i = 0; i < changeColor.length; i++) {
+          changeColor[i].style.color = "black";
+        }
+      }
+      link.addEventListener("mouseover", highlight);
+      link.addEventListener("mouseleave", return_normal);
+    </script>
+  </body>
+</html>

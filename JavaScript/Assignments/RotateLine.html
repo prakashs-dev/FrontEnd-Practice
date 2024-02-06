@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #line {
+        width: 200px;
+        height: 2px;
+        position: absolute;
+        background-color: black;
+        top: 50%;
+        left: 50%;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="line"></div>
+    <script>
+      const line = document.querySelector("#line");
+      let angle = 0;
+      setInterval(() => {
+        angle += 2;
+        line.style.transform = `rotate(${angle}deg)`;
+      }, 20);
+    </script>
+  </body>
+</html>

@@ -23,8 +23,8 @@
 // console.log(rectArea(5,4));
 
 // var h = 10;
-// function admin(){
-//     var h = 20;
+// function admin() {
+//   h = 20;
 // }
 // admin();
 // console.log(h);
@@ -128,8 +128,6 @@
 //     return a - b;
 // });
 // console.log(as);
-
-console.log("Help");
 
 // function calculateGrade(mark) {
 //   if (mark >= 90 && mark <= 100) {
@@ -408,7 +406,6 @@ console.log("Help");
 // console.log(count1);//1
 // console.log(count2);//2
 
-
 // function cart() {
 //   let iteam = 0;
 //   return{
@@ -449,8 +446,8 @@ console.log("Help");
 
 // const azz = [10,20,30,40,50];
 // // azz[10]=40;
-// let nz = azz.slice(2,4);
-// console.log(nz);
+// azz.splice(1,3);
+// console.log(azz);
 
 // let aa = 1;
 // let b = 2;
@@ -468,7 +465,141 @@ console.log("Help");
 // let rr = gg.slice(-5, -1);
 // console.log(rr);
 
-var am = 3;
-var an = 8;
-let ans = Math.floor(an/am);
-console.log(ans); 
+// var am = 3;
+// var an = 8;
+// let ans = Math.floor(an/am);
+// console.log(ans);
+
+// const arr = [1, 2, 3];
+// arr[10] = 10;
+// console.log(arr.length);
+
+// function User(name) {
+//   this.name = name;
+//   this.admin = false;
+// }
+
+// var user = new User("prakash");
+// console.log(user);
+
+// let g = 2;
+// function test(b) {
+//   return g * b;
+// }
+// g = 3;
+// let con = test(4);
+// console.log(con);
+
+// document.addEventListener('DOMContentLoaded', function(){
+//     console.log('dom is ready');
+// })
+// console.log('script ready');
+
+// const arr = [1, 2, 3, 4, 5];
+// const newArr = arr.filter((num) => num % 2 === 0);
+// console.log(newArr.length);
+
+// const arr1 = [1,2,3];
+// const arr2 = [4,5,6];
+// const arr3 = arr1.concat(arr2);
+// console.log(arr3.indexOf(4));
+
+// let x = 7;
+// if(x % 2 == 0){
+//   console.log(1);
+// }else if( x % 3 == 0){
+//   console.log(2);
+// }else{
+//   console.log(3);
+// }
+
+// let x = 10;
+// let y = 5;
+// let zz = x % y ** 2;
+// console.log(zz);
+
+// let str = "hello world";
+// let newStr = str.slice(-5, -1);
+// console.log(newStr);
+
+// const jj = {};
+// const kk = { key: 'kk'}
+// const mm = { key: 'mm'};
+// jj[kk] = 123;
+// jj[mm] = 456;
+// console.log(jj[kk]);
+
+// String.prototype.refName = () => {
+//   return "just give up";
+// };
+// const name = "layz";
+// console.log(name.refName());
+
+// class Rectangle {
+//   constructor(width, height) {
+//     this.width = width;
+//     this.height = height;
+//   }
+//   get area(){
+//     return this.width * this.height;
+//   }
+// }
+// const rect = new Rectangle(4, 5);
+// console.log(rect.area);
+// rect.width = 6;
+// console.log(rect.area);
+
+// const x = 12345678901234567890n;
+// const y = BigInt("98745632109876543210");
+// const t = x + y;
+// console.log(t);
+
+// for (let i = 1; i < 5; i++) {
+//   if (i === 3) continue;
+//   console.log(i);
+// }
+
+// const obj5 = { 1: "a", 2: "b", 3: "c" };
+// const set = new Set([1, 2, 3, 4, 5]);
+// console.log(
+//   obj5.hasOwnProperty("1"),
+//   obj5.hasOwnProperty(1),
+//   set.has("1"),
+//   set.has(1)
+// );
+
+// const date1 = new Date("2023-03-31T23:59:59.999Z");
+// const date2 = new Date("2023-04-01T00:00:00.000Z");
+// const dif = date2 - date1;
+// console.log(dif);
+
+// class Animal {
+//   constructor(name, type) {
+//     this.name = name;
+//     this.type = type;
+//   }
+//   makeSound() {
+//     console.log("Animal sound");
+//   }
+// }
+
+// class Dog extends Animal {
+//   constructor(name) {
+//     super(name, "Dog");
+//   }
+//   makeSound() {
+//     console.log("woof");
+//   }
+// }
+// const myDog = new Dog("fido");
+// myDog.makeSound();
+
+// const obj6 = { a: "one", b: "two", a: "three" };
+// console.log(obj6);
+
+// const name = "falsndkj";
+// age = 21;
+// console.log(delete name);
+// console.log(delete age);
+
+
